@@ -25,3 +25,7 @@
 * Adicionar uma funcionalidade na solução adotada para identificar a existência de um caminho de Euler.
 
 - Criar um padrão para entrada de dados a partir da leitura de um arquivo para geração do grafo.
+
+## Run
+
+- Run with Springboot `./mvnw spring-boot:run`

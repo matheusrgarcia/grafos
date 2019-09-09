@@ -83,7 +83,7 @@ public class Menu implements CommandLineRunner {
 
         System.out.println("********** Ordem do Grafo **********");
 
-        System.out.println("\t\t " + Grafo.ordemGrafo());
+        System.out.println("\t " + Grafo.ordemGrafo());
         break;
 
       case 2:
@@ -108,9 +108,9 @@ public class Menu implements CommandLineRunner {
         }
 
         if (Grafo.existeAresta(v1, v2)) {
-          System.out.println("\t\t Existe aresta entre os vértices!");
+          System.out.println("\t Existe aresta entre os vértices!");
         } else {
-          System.out.println("\t\t Não existe aresta entre os vértices!");
+          System.out.println("\t Não existe aresta entre os vértices!");
         }
 
         // visualizar grafo
@@ -158,9 +158,9 @@ public class Menu implements CommandLineRunner {
           Grafo.insereVertice(v);
 
           // imprime novo grafo
-          /*
-           * System.out.println("Grafo atual: "); Grafo.imprime();
-           */
+
+          System.out.println("Grafo atual: ");
+          Grafo.imprime();
 
           break;
 
@@ -286,9 +286,9 @@ public class Menu implements CommandLineRunner {
           }
 
           if (Grafo.removeAresta(v1, v2) == true) {
-            System.out.println("\t\t Aresta removida entre os vértices " + v1 + " e " + v2);
+            System.out.println("\t Aresta removida entre os vértices " + v1 + " e " + v2);
           } else {
-            System.out.println("\t\t Não existe aresta entre os vértices!");
+            System.out.println("\t Não existe aresta entre os vértices!");
           }
 
           // Visualiza grafo
@@ -333,7 +333,7 @@ public class Menu implements CommandLineRunner {
           v = entradas.nextInt();
         }
 
-        System.out.println("\t\t Grau do vértice " + v + " = " + Grafo.grauVertice(v));
+        System.out.println("\t Grau do vértice " + v + " = " + Grafo.grauVertice(v));
 
         break;
 
@@ -358,9 +358,9 @@ public class Menu implements CommandLineRunner {
         System.out.println("\n");
 
         if (Grafo.grafoConexo() == true) {
-          System.out.println("\t\t O grafo é conexo!");
+          System.out.println("\t O grafo é conexo!");
         } else {
-          System.out.println("\t\t O grafo não é conexo!");
+          System.out.println("\t O grafo não é conexo!");
         }
 
         break;
@@ -370,7 +370,7 @@ public class Menu implements CommandLineRunner {
 
         System.out.println("********** Matriz de Adjacência **********");
 
-        System.out.println("\t\t " + qtdVertices + " x " + qtdVertices);
+        System.out.println("\t " + qtdVertices + " x " + qtdVertices);
 
         Grafo.imprime();
 
@@ -386,6 +386,7 @@ public class Menu implements CommandLineRunner {
 
       case 0:
         // sair
+        System.out.println("Saindo...");
         break;
       }
     }

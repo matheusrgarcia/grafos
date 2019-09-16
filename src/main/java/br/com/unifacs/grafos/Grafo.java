@@ -36,7 +36,7 @@ public class Grafo {
 
   // Tipo 2 - Gera Grafo Ponderado
   public void grafoPonderado() {
-    Scanner entradas = new Scanner(System.in);
+    Scanner entries = new Scanner(System.in);
 
     int peso;
 
@@ -45,25 +45,24 @@ public class Grafo {
 
         System.out.println("Aresta entre vértices " + i + " e " + j);
         System.out.println("Digite o peso: ");
-        peso = entradas.nextInt();
+        peso = entries.nextInt();
 
         // não permite peso negativo
         while (peso < 0) {
           System.out.println("Valor Inválido. Digite o peso: ");
-          peso = entradas.nextInt();
+          peso = entries.nextInt();
         }
 
         this.matriz[i][j] = peso;
       }
     }
     System.out.println("\t\tUM GRAFO PONDERADO FOI GERADO");
-    entradas.close();
   }
 
   // Tipo 3 - Gera Grafo Dirigido
   public void grafoDirigido() {
 
-    Scanner entradas = new Scanner(System.in);
+    Scanner entries = new Scanner(System.in);
 
     int valor;
 
@@ -71,14 +70,13 @@ public class Grafo {
       for (int j = 0; j < this.qtdVertices; j++) {
 
         System.out.println("Digite valor entre os vértices " + i + " e " + j);
-        valor = entradas.nextInt();
+        valor = entries.nextInt();
 
         this.matriz[i][j] = valor;
       }
     }
 
     System.out.println("\t\t GRAFO PONDERADO GERADO");
-    entradas.close();
   }
 
   // Retorna ordem do grafo

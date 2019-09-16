@@ -13,7 +13,7 @@ public class Menu implements CommandLineRunner {
 
     System.out.println("*************** ESCOLHA O TIPO DE GRAFO ***************");
 
-    Scanner entradas = new Scanner(System.in);
+    Scanner entries = new Scanner(System.in);
 
     int tipo = 0;
 
@@ -23,10 +23,10 @@ public class Menu implements CommandLineRunner {
 
       if (tipo < 0 || tipo > 3) {
         System.out.println("Opção Inválida. Digite a opção desejada: ");
-        tipo = entradas.nextInt();
+        tipo = entries.nextInt();
       } else {
         System.out.println("Digite a opção desejada: ");
-        tipo = entradas.nextInt();
+        tipo = entries.nextInt();
       }
 
     } while (tipo < 0 || tipo > 3);
@@ -38,10 +38,10 @@ public class Menu implements CommandLineRunner {
       do {
         if (qtdVertices < 0) {
           System.out.println("Valor inválido. Digite a quantidade de Vértices: ");
-          qtdVertices = entradas.nextInt();
+          qtdVertices = entries.nextInt();
         } else {
           System.out.println("Digite a quantidade de Vértices: ");
-          qtdVertices = entradas.nextInt();
+          qtdVertices = entries.nextInt();
         }
       } while (qtdVertices < 0);
 
@@ -67,10 +67,10 @@ public class Menu implements CommandLineRunner {
 
         if (opcao < 0 || opcao > 10) {
           System.out.println("Opção inválida. Digite a opção desejada corretamente: ");
-          opcao = entradas.nextInt();
+          opcao = entries.nextInt();
         } else {
           System.out.println("Digite a opção desejada: ");
-          opcao = entradas.nextInt();
+          opcao = entries.nextInt();
         }
 
       } while (opcao < 0 || opcao > 10);
@@ -92,19 +92,19 @@ public class Menu implements CommandLineRunner {
         System.out.println("********** Verificar existência de Aresta entre dois v�rtices **********");
 
         System.out.println("Digite o 1ª Vértice: ");
-        v1 = entradas.nextInt();
+        v1 = entries.nextInt();
 
         while (v1 < 0 || v1 > (qtdVertices - 1)) {
           System.out.println("Valor inválido. Digite o 1ª vértice: ");
-          v1 = entradas.nextInt();
+          v1 = entries.nextInt();
         }
 
         System.out.println("Digite o 2ª Vértice: ");
-        v2 = entradas.nextInt();
+        v2 = entries.nextInt();
 
         while (v2 < 0 || v2 > (qtdVertices - 1)) {
           System.out.println("Valor inválido. Digite o 2ª vértice: ");
-          v2 = entradas.nextInt();
+          v2 = entries.nextInt();
         }
 
         if (Grafo.existeAresta(v1, v2)) {
@@ -131,22 +131,22 @@ public class Menu implements CommandLineRunner {
         System.out.println("0 - Sair");
 
         System.out.println("Digite a opção desejada: ");
-        opcaoCase = entradas.nextInt();
+        opcaoCase = entries.nextInt();
 
         while (opcaoCase < 0 || opcaoCase > 2) {
           System.out.println("Opção inválida. Digite a opção desejada: ");
-          opcaoCase = entradas.nextInt();
+          opcaoCase = entries.nextInt();
         }
 
         switch (opcaoCase) {
         case 1:
           System.out.println("********** INSERIR vértice **********");
           System.out.println("Digite a quantidade de vértice(s) a ser inserido: ");
-          v = entradas.nextInt();
+          v = entries.nextInt();
 
           while (v < 1) {
             System.out.println("Valor inválido. Digite quantidade de vértice a ser inserido: ");
-            v = entradas.nextInt();
+            v = entries.nextInt();
           }
 
           // imprime grafo anterior
@@ -167,11 +167,11 @@ public class Menu implements CommandLineRunner {
         case 2:
           System.out.println("********** REMOVER vértice **********");
           System.out.println("Digite o v�rtice a ser removido:");
-          v = entradas.nextInt();
+          v = entries.nextInt();
 
           while ((v < 0) || (v > (qtdVertices - 1))) {
             System.out.println("Valor inválido. Digite o vértice a ser removido:");
-            v = entradas.nextInt();
+            v = entries.nextInt();
           }
 
           // Imprime grafo anterior
@@ -205,11 +205,11 @@ public class Menu implements CommandLineRunner {
         System.out.println("0 - Sair");
 
         System.out.println("Digite a opção desejada: ");
-        opcaoCase = entradas.nextInt();
+        opcaoCase = entries.nextInt();
 
         while (opcaoCase < 0 || opcaoCase > 2) {
           System.out.println("Opção inválida. Digite a opção desejada: ");
-          opcaoCase = entradas.nextInt();
+          opcaoCase = entries.nextInt();
         }
 
         switch (opcaoCase) {
@@ -218,22 +218,22 @@ public class Menu implements CommandLineRunner {
 
           // Obtendo 1ª vértice
           System.out.println("Digite o 1ª vértice: ");
-          v1 = entradas.nextInt();
+          v1 = entries.nextInt();
 
           // Verifica se 1ª vértice existe
           while (v1 < 0 || v1 > (qtdVertices - 1)) {
             System.out.println("Valor Inválido. Digite o 1ª vértice: ");
-            v1 = entradas.nextInt();
+            v1 = entries.nextInt();
           }
 
           // Obtendo 2ª vértice
           System.out.println("Digite o 2ª vértice: ");
-          v2 = entradas.nextInt();
+          v2 = entries.nextInt();
 
           // Verifica se 2ª vértice existe
           while (v2 < 0 || v2 > (qtdVertices - 1)) {
             System.out.println("Valor Inválido. Digite o 2ª vértice: ");
-            v2 = entradas.nextInt();
+            v2 = entries.nextInt();
           }
 
           System.out.println("\n");
@@ -241,19 +241,19 @@ public class Menu implements CommandLineRunner {
           // Se for grafo ponderado, pega o peso da aresta
           if (tipo == 2) {
             System.out.println("Digite o peso da aresta: ");
-            peso = entradas.nextInt();
+            peso = entries.nextInt();
 
             // Não permitir peso negativo
             while (peso < 0) {
               System.out.println("Valor Inválido. Digite o peso da aresta: ");
-              peso = entradas.nextInt();
+              peso = entries.nextInt();
             }
           }
 
           // Caso seja um grafo dirigido, pegar o valor da aresta
           if (tipo == 3) {
             System.out.println("Digite o valor da aresta: ");
-            peso = entradas.nextInt();
+            peso = entries.nextInt();
           }
 
           Grafo.insereAresta(v1, v2, peso);
@@ -267,22 +267,22 @@ public class Menu implements CommandLineRunner {
 
           // Obtendo 1º vértice
           System.out.println("Digite o 1º vértice: ");
-          v1 = entradas.nextInt();
+          v1 = entries.nextInt();
 
           // Verifica se 1º vértice existe
           while (v1 < 0 || v1 > (qtdVertices - 1)) {
             System.out.println("Valor Inválido. Digite o 1ª vértice: ");
-            v1 = entradas.nextInt();
+            v1 = entries.nextInt();
           }
 
           // Obtendo 2º vértice
           System.out.println("Digite o 2ª vértice: ");
-          v2 = entradas.nextInt();
+          v2 = entries.nextInt();
 
           // Verifica se 2º vértice existe
           while (v2 < 0 || v2 > (qtdVertices - 1)) {
             System.out.println("Valor Inválido. Digite o 2ª vértice: ");
-            v2 = entradas.nextInt();
+            v2 = entries.nextInt();
           }
 
           if (Grafo.removeAresta(v1, v2) == true) {
@@ -313,7 +313,7 @@ public class Menu implements CommandLineRunner {
         // Grafo.imprime();
 
         System.out.println("Digite o Vértice:");
-        v = entradas.nextInt();
+        v = entries.nextInt();
 
         Grafo.verticeAdjacente(v);
 
@@ -326,11 +326,11 @@ public class Menu implements CommandLineRunner {
         System.out.println("********** Obter Grau de Determinado Vértice **********");
 
         System.out.println("Digite o vértice:");
-        v = entradas.nextInt();
+        v = entries.nextInt();
 
         while (v < 0 || v > (qtdVertices - 1)) {
           System.out.println("Valor Inválido. Digite o vértice:");
-          v = entradas.nextInt();
+          v = entries.nextInt();
         }
 
         System.out.println("\t Grau do vértice " + v + " = " + Grafo.grauVertice(v));
@@ -387,6 +387,7 @@ public class Menu implements CommandLineRunner {
       case 0:
         // sair
         System.out.println("Saindo...");
+        entries.close();
         break;
       }
     }

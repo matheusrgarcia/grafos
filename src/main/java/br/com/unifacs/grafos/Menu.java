@@ -176,7 +176,8 @@ public class Menu implements CommandLineRunner {
 
           // Imprime grafo anterior
           /*
-           * System.out.println("Grafo anterior: "); Grafo.imprime();
+           * System.out.println("Grafo anterior: "); 
+           Grafo.imprime();
            */
 
           Grafo.removeVertice(v);
@@ -256,6 +257,7 @@ public class Menu implements CommandLineRunner {
             peso = entries.nextInt();
           }
 
+          System.out.println("Peso: " + peso);
           Grafo.insereAresta(v1, v2, peso);
 
           // Visualiza grafo

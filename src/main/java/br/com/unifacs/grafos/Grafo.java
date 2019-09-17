@@ -6,7 +6,10 @@ public class Grafo {
   private int matriz[][], matrizTemp[][];
   private int tipoGrafo;
   private int qtdVertices;
+ 
   boolean visitado;
+
+  // Receber uma lista de Vertices /  Aresta
 
   // Grafo Padrão constructor
   public Grafo(int tipo, int qtdVertices) {

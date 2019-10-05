@@ -18,11 +18,11 @@ public class Principal {
 				+ "4 - Criar grafo e Gerar Matriz de Acessibiidade R \n" + "5 - Criar grafo e Encontrar Caminho Mínimo \n"
 				+ "0 - Sair \n");
 
-		System.out.println("Digite a opcao desejada: ");
+		System.out.println("Digite a opção desejada: ");
 		tipo = entradas.nextInt();
 
 		while (tipo < 0 || tipo > 5) {
-			System.out.println("Opcao invalida. Digite a opcao desejada: ");
+			System.out.println("Opção invalida. Digite a opção desejada: ");
 			tipo = entradas.nextInt();
 		}
 
@@ -58,22 +58,22 @@ public class Principal {
 
 						System.out.println("********** MENU **********");
 
-						System.out
-								.println("1 - Verificar Ordem do grafo \n" + "2 - Verificar existencia de Aresta entre dois vertices \n"
-										+ "3 - Inserir/Remover vertice \n" + "4 - Inserir/Remover aresta \n"
-										+ "5 - Obter vertices adjacentes \n" + "6 - Obter grau de determinado vertice \n"
-										+ "7 - Obter grau minimo, medio ou maximo \n" + "8 - Verificar se o grafo e Conexo \n"
-										+ "9 - Obter matriz de adjacencia \n" + "10 - Verificar se existe um Caminho de Euler no grafo\n"
-										+ "11 - Verificar vertice com maior componente\n" + "12 - Verificar componentes conectados\n"
+						System.out.println(
+								"1 - Verificar Ordem do grafo \n" + "2 - Verificar a existência de uma Aresta entre dois vértices \n"
+										+ "3 - Inserir/Remover Vértice \n" + "4 - Inserir/Remover Aresta \n"
+										+ "5 - Obter Vértices adjacentes \n" + "6 - Obter grau de determinado vértice \n"
+										+ "7 - Obter grau Mínimo, Médio ou Máximo \n" + "8 - Verificar se o grafo e Conexo \n"
+										+ "9 - Obter matriz de adjacência \n" + "10 - Verificar se existe um Caminho de Euler no grafo\n"
+										+ "11 - Verificar Vértice com maior componente\n" + "12 - Verificar componentes conectados\n"
 										+ "0 - Sair");
 
 						System.out.println("\n");
 
 						if (opcao < 0 || opcao > 12) {
-							System.out.println("Opcao invalida. Digite a opcao desejada: ");
+							System.out.println("Opção inválida. Digite a opção desejada: ");
 							opcao = entradas.nextInt();
 						} else {
-							System.out.println("Digite a opcao desejada: ");
+							System.out.println("Digite a opção desejada: ");
 							opcao = entradas.nextInt();
 						}
 
@@ -93,7 +93,7 @@ public class Principal {
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 
@@ -104,30 +104,30 @@ public class Principal {
 
 						System.out.println("********** Verificar existencia de Aresta entre dois vertices **********");
 
-						// Pega valor do 1� vertice
-						System.out.println("Digite o 1� v�rtice: ");
+						// Pega valor do 1ª Vértice
+						System.out.println("Digite o 1ª Vértice: ");
 						v1 = entradas.nextInt();
 
-						// Testa se 1� vertice existe
+						// Testa se 1ª Vértice existe
 						while (v1 < 0 || v1 > (qtdVertices - 1)) {
-							System.out.println("Valor invalido. Digite o 1� vertice: ");
+							System.out.println("Valor inválido. Digite o 1ª Vértice: ");
 							v1 = entradas.nextInt();
 						}
 
 						// Pega valor do 2� vertice
-						System.out.println("Digite o 2� vertice: ");
+						System.out.println("Digite o 2ª Vértice: ");
 						v2 = entradas.nextInt();
 
 						// Testa se 2� vertice existe
 						while (v2 < 0 || v2 > (qtdVertices - 1)) {
-							System.out.println("Valor invalido. Digite o 2� vertice: ");
+							System.out.println("Valor inválido. Digite o 2º Vértice: ");
 							v2 = entradas.nextInt();
 						}
 
 						if (Grafo.existeAresta(v1, v2)) {
-							System.out.println("-> Existe aresta entre os vertices!");
+							System.out.println("-> Existe aresta entre os vértices!");
 						} else {
-							System.out.println("-> Nao existe aresta entre os vertices!");
+							System.out.println("-> Não existe aresta entre os vértices!");
 						}
 
 						// visualizar grafo
@@ -137,7 +137,7 @@ public class Principal {
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 
@@ -149,28 +149,28 @@ public class Principal {
 
 						System.out.println("\n");
 
-						System.out.println("********** Inserir/Remover Vertice **********");
+						System.out.println("********** Inserir/Remover Vértice **********");
 
-						System.out.println("1 - Inserir vertice");
-						System.out.println("2 - Remover vertice");
+						System.out.println("1 - Inserir Vértice");
+						System.out.println("2 - Remover Vértice");
 						System.out.println("0 - Sair");
 
-						System.out.println("Digite a opcao desejada: ");
+						System.out.println("Digite a opção desejada: ");
 						opcaoCase = entradas.nextInt();
 
 						while (opcaoCase < 0 || opcaoCase > 2) {
-							System.out.println("Opcao invalida. Digite a opcao desejada: ");
+							System.out.println("Opção inválida. Digite a opção desejada: ");
 							opcaoCase = entradas.nextInt();
 						}
 
 						switch (opcaoCase) {
 						case 1:
-							System.out.println("********** INSERIR vertice **********");
-							System.out.println("Digite quantidade de vertice a ser inserido: ");
+							System.out.println("********** Inserir Vértice **********");
+							System.out.println("Digite quantidade de vértices a ser inserido: ");
 							v = entradas.nextInt();
 
 							while (v < 1) {
-								System.out.println("Valor invalido. Digite quantidade de vertice a ser inserido: ");
+								System.out.println("Valor inválido. Digite quantidade de vértice(s) a ser inserido: ");
 								v = entradas.nextInt();
 							}
 
@@ -193,19 +193,19 @@ public class Principal {
 							menu = entradas.nextInt();
 
 							while (menu < 0 || menu > 1) {
-								System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+								System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 								menu = entradas.nextInt();
 							}
 
 							break;
 
 						case 2:
-							System.out.println("********** REMOVER vertice **********");
-							System.out.println("Digite o vertice a ser removido:");
+							System.out.println("********** REMOVER Vértice **********");
+							System.out.println("Digite o Vértice a ser removido:");
 							v = entradas.nextInt();
 
 							while ((v < 0) || (v > (qtdVertices - 1))) {
-								System.out.println("Valor invalido. Digite o vertice a ser removido:");
+								System.out.println("Valor inválido. Digite o vértice a ser removido:");
 								v = entradas.nextInt();
 							}
 
@@ -227,14 +227,14 @@ public class Principal {
 							menu = entradas.nextInt();
 
 							while (menu < 0 || menu > 1) {
-								System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+								System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 								menu = entradas.nextInt();
 							}
 
 							break;
 
 						case 0:
-							// sair
+							// Sair
 							menu = 0;
 							System.out.println("\nPrograma Encerrado!");
 							entradas.close();
@@ -254,12 +254,12 @@ public class Principal {
 						System.out.println("2 - Remover aresta");
 						System.out.println("0 - Sair");
 
-						System.out.println("Digite a opcao desejada: ");
+						System.out.println("Digite a opção desejada: ");
 						opcaoCase = entradas.nextInt();
 
 						// Testa se opcao e valida
 						while (opcaoCase < 0 || opcaoCase > 2) {
-							System.out.println("Opcao invalida. Digite a opcao desejada: ");
+							System.out.println("Opção invalida. Digite a opção desejada: ");
 							opcaoCase = entradas.nextInt();
 						}
 
@@ -267,23 +267,23 @@ public class Principal {
 						case 1:
 							System.out.println("********** INSERIR aresta **********");
 
-							// Obtendo 1� vertice
-							System.out.println("Digite o 1� vertice: ");
+							// Obtendo 1º vertice
+							System.out.println("Digite o 1º vértice: ");
 							v1 = entradas.nextInt();
 
-							// Verifica se 1� vertice existe
+							// Verifica se 1º vertice existe
 							while (v1 < 0 || v1 > (qtdVertices - 1)) {
-								System.out.println("Valor Invalido. Digite o 1� vertice: ");
+								System.out.println("Valor Inválido. Digite o 1º vértice: ");
 								v1 = entradas.nextInt();
 							}
 
-							// Obtendo 2� vertice
-							System.out.println("Digite o 2� vertice: ");
+							// Obtendo 2º vertice
+							System.out.println("Digite o 2º vertice: ");
 							v2 = entradas.nextInt();
 
-							// Verifica se 2� vertice existe
+							// Verifica se 2º vertice existe
 							while (v2 < 0 || v2 > (qtdVertices - 1)) {
-								System.out.println("Valor Invalido. Digite o 2� vertice: ");
+								System.out.println("Valor Inválido. Digite o 2º vértice: ");
 								v2 = entradas.nextInt();
 							}
 
@@ -298,7 +298,7 @@ public class Principal {
 							menu = entradas.nextInt();
 
 							while (menu < 0 || menu > 1) {
-								System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+								System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 								menu = entradas.nextInt();
 							}
 
@@ -307,30 +307,30 @@ public class Principal {
 						case 2:
 							System.out.println("********** REMOVER aresta **********");
 
-							// Obtendo 1� vertice
-							System.out.println("Digite o 1� vertice: ");
+							// Obtendo 1º vertice
+							System.out.println("Digite o 1º vértice: ");
 							v1 = entradas.nextInt();
 
-							// Verifica se 1� vertice existe
+							// Verifica se 1º vertice existe
 							while (v1 < 0 || v1 > (qtdVertices - 1)) {
-								System.out.println("Valor Invalido. Digite o 1� vertice: ");
+								System.out.println("Valor Inválido. Digite o 1º vértice: ");
 								v1 = entradas.nextInt();
 							}
 
-							// Obtendo 2� vertice
-							System.out.println("Digite o 2� vertice: ");
+							// Obtendo 2º vertice
+							System.out.println("Digite o 2º vértice: ");
 							v2 = entradas.nextInt();
 
-							// Verifica se 2� vertice existe
+							// Verifica se 2º vertice existe
 							while (v2 < 0 || v2 > (qtdVertices - 1)) {
-								System.out.println("Valor Invalido. Digite o 2� vertice: ");
+								System.out.println("Valor Inválido. Digite o 2º vértice: ");
 								v2 = entradas.nextInt();
 							}
 
 							if (Grafo.removeAresta(v1, v2) == true) {
-								System.out.println("-> Aresta removida entre os vertices " + v1 + " e " + v2);
+								System.out.println("-> Aresta removida entre os vértices " + v1 + " e " + v2);
 							} else {
-								System.out.println("-> Nao existe aresta entre os vertices!");
+								System.out.println("-> Não existe aresta entre os vértices!");
 							}
 
 							// visualiza grafo
@@ -340,13 +340,13 @@ public class Principal {
 							menu = entradas.nextInt();
 
 							while (menu < 0 || menu > 1) {
-								System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+								System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 								menu = entradas.nextInt();
 							}
 							break;
 
 						case 0:
-							// sair
+							// Sair
 							menu = 0;
 							System.out.println("\nPrograma Encerrado!");
 							entradas.close();
@@ -361,12 +361,12 @@ public class Principal {
 
 						System.out.println("\n");
 
-						System.out.println("********** Obter Vertices Adjacentes **********");
+						System.out.println("********** Obter Vértices Adjacentes **********");
 
 						// visualiza grafo
 						// Grafo.imprime();
 
-						System.out.println("Digite o vertice:");
+						System.out.println("Digite o vértice:");
 						v = entradas.nextInt();
 
 						Grafo.verticeAdjacente(v);
@@ -384,23 +384,23 @@ public class Principal {
 					case 6:
 						System.out.println("\n");
 
-						System.out.println("********** Obter Grau de Determinado Vertice **********");
+						System.out.println("********** Obter Grau de Determinado Vértice **********");
 
-						System.out.println("Digite o vertice:");
+						System.out.println("Digite o vértice:");
 						v = entradas.nextInt();
 
 						while (v < 0 || v > (qtdVertices - 1)) {
-							System.out.println("Valor Invalido. Digite o vertice:");
+							System.out.println("Valor Inválido. Digite o vértice:");
 							v = entradas.nextInt();
 						}
 
-						System.out.println("-> Grau do vertice " + v + " = " + Grafo.grauVertice(v));
+						System.out.println("-> Grau do vértice " + v + " = " + Grafo.grauVertice(v));
 
 						System.out.println("\nDigite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 
@@ -411,7 +411,7 @@ public class Principal {
 
 						System.out.println("\n");
 
-						System.out.println("********** Obter Grau Minimo, Medio e Maximo do Grafo **********");
+						System.out.println("********** Obter Grau Mínimo, Médio e Máximo do Grafo **********");
 
 						Grafo.grauM3();
 
@@ -419,7 +419,7 @@ public class Principal {
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 
@@ -436,16 +436,16 @@ public class Principal {
 						System.out.println("\n");
 
 						if (Grafo.grafoConexo() == true) {
-							System.out.println("-> O grafo e conexo!");
+							System.out.println("-> O grafo é conexo!");
 						} else {
-							System.out.println("-> O grafo nao e conexo!");
+							System.out.println("-> O grafo não é conexo!");
 						}
 
 						System.out.println("\nDigite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 
@@ -464,7 +464,7 @@ public class Principal {
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 
@@ -481,14 +481,14 @@ public class Principal {
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 						break;
 
 					case 11:
 						System.out.println("\n");
-						System.out.println("********** Verificar vertice de maior componente **********");
+						System.out.println("********** Verificar vértice de maior componente **********");
 
 						Grafo.maiorComponente();
 
@@ -496,7 +496,7 @@ public class Principal {
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 						break;
@@ -510,12 +510,12 @@ public class Principal {
 						menu = entradas.nextInt();
 
 						while (menu < 0 || menu > 1) {
-							System.out.println("Valor invalido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
+							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
 						break;
 					case 0:
-						// sair
+						// Sair
 						menu = 0;
 						System.out.println("\nPrograma Encerrado!");
 						entradas.close();
@@ -523,13 +523,10 @@ public class Principal {
 						break;
 					}
 				}
-
-				System.out.println("\nFIM!");
-
+				System.out.println("\nFim de execução!");
 			}
 		} else {
-
-			System.out.println("\nFIM!");
+			System.out.println("\nFim de execução!");
 		}
 	}
 

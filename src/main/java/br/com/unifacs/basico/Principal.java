@@ -6,14 +6,16 @@ public class Principal {
 
 	public static void main(String[] args) {
 
+		System.console().flush();
+
 		System.out.println("*************** MENU ***************");
 
 		Scanner entradas = new Scanner(System.in);
 
 		int tipo = 0;
 
-		System.out.println("1 - Grafo Nao Ponderado \n" + "2 - Grafo Ponderado \n" + "3 - Grafo Dirigido \n"
-				+ "4 - Criar grafo e Gerar Matriz de Acessibiidade R \n" + "5 - Criar grafo e Encontrar Caminho Minimo \n"
+		System.out.println("1 - Grafo Não Ponderado \n" + "2 - Grafo Ponderado \n" + "3 - Grafo Dirigido \n"
+				+ "4 - Criar grafo e Gerar Matriz de Acessibiidade R \n" + "5 - Criar grafo e Encontrar Caminho Mínimo \n"
 				+ "0 - Sair \n");
 
 		System.out.println("Digite a opcao desejada: ");
@@ -26,16 +28,16 @@ public class Principal {
 
 		if (tipo != 0) {
 
-			int qtdVertices = 0, peso = 0;
+			int qtdVertices = 0;
 
-			// Pega a quantidade de vertices
+			// Pega a quantidade de vértices
 
-			System.out.println("Digite a quantidade de vertices: ");
+			System.out.println("Digite a quantidade de vértices: ");
 			qtdVertices = entradas.nextInt();
 
 			// tem que ter pelo menos um vertice para gerar o grafo
 			while (qtdVertices < 1) {
-				System.out.println("Valor invalido. Digite a quantidade de vertices: ");
+				System.out.println("Valor inválido. Digite a quantidade de vértices: ");
 				qtdVertices = entradas.nextInt();
 			}
 
@@ -234,6 +236,10 @@ public class Principal {
 						case 0:
 							// sair
 							menu = 0;
+							System.out.println("\nPrograma Encerrado!");
+							entradas.close();
+							System.console().flush();
+							System.exit(0);
 							break;
 						}
 
@@ -342,6 +348,9 @@ public class Principal {
 						case 0:
 							// sair
 							menu = 0;
+							System.out.println("\nPrograma Encerrado!");
+							entradas.close();
+							System.exit(0);
 							break;
 						}
 
@@ -506,7 +515,11 @@ public class Principal {
 						}
 						break;
 					case 0:
+						// sair
 						menu = 0;
+						System.out.println("\nPrograma Encerrado!");
+						entradas.close();
+						System.exit(0);
 						break;
 					}
 				}
@@ -519,4 +532,5 @@ public class Principal {
 			System.out.println("\nFIM!");
 		}
 	}
+
 }

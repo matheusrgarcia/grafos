@@ -223,7 +223,7 @@ public class Grafo {
 
 					this.matriz[v1][v2] = peso;
 
-					System.out.println("-> Aresta com peso = " + peso + " inserida entre os v�rtices " + v1 + " e " + v2 + "!");
+					System.out.println("-> Aresta com peso = " + peso + " inserida entre os vértices " + v1 + " e " + v2 + "!");
 				} else {
 					System.out.println("Digite o valor da aresta: ");
 					peso = entradas.nextInt();
@@ -231,7 +231,7 @@ public class Grafo {
 					System.out.println("-> Aresta com valor = " + peso + " inserida entre os vertices " + v1 + " e " + v2 + "!");
 				}
 			} else {
-				System.out.println("-> Ja existe aresta entre os v�rtices " + v1 + " e " + v2 + "!");
+				System.out.println("-> Ja existe aresta entre os vértices " + v1 + " e " + v2 + "!");
 
 				int alterar = 0;
 
@@ -239,7 +239,7 @@ public class Grafo {
 				alterar = entradas.nextInt();
 
 				while (alterar < 0 || alterar > 1) {
-					System.out.println("Op��o invalida. Deseja alterar valor? \n" + "1 - Sim \n" + "0 - Nao \n");
+					System.out.println("Opção invalida. Deseja alterar valor? \n" + "1 - Sim \n" + "0 - Nao \n");
 					alterar = entradas.nextInt();
 				}
 
@@ -318,7 +318,7 @@ public class Grafo {
 	// Opcao 7 - Obtem grau minimo, medio e maximo da matriz
 	public void grauM3() {
 		int grauMinimo = 0, grauMaximo = 0;
-		int cont = 1, soma = 0;
+		int soma = 0;
 		int grauMedio = 0;
 
 		grauMinimo = grauVertice(0);
@@ -406,7 +406,7 @@ public class Grafo {
 		}
 	}
 
-	// Opcao 10 - Verificar se existe um caminho de Euler?
+	// Opcao 10 - Verificar se existe um caminho de Euler.
 	public void caminhoEuler() {
 		int qtdImpar = 0;
 
@@ -446,7 +446,7 @@ public class Grafo {
 					for (int j = 0; j < this.qtdVertices; j++) { // percorre colunas
 
 						// operacao booleana OR
-						if (this.matriz[i][j] == 1 || this.matriz[k][j] == 1) { // se um dos valores � 1
+						if (this.matriz[i][j] == 1 || this.matriz[k][j] == 1) { // se um dos valores é 1
 							matrizTemp[i][j] = 1;
 						} else {
 							matrizTemp[i][j] = 0;
@@ -516,20 +516,20 @@ public class Grafo {
 
 				for (int j = 0; j < this.qtdVertices; j++) { // percorre COLUNAS
 
-					// n�o entra na diagonal principal
+					// Não entra na diagonal principal
 					if (i != j) {
 
-						// GRAFO NAO DIRIGIDO
+						// GRAFO NÃO DIRIGIDO
 						if (tipoG == 2) {
 
 							if ((this.matriz[i][j] == 0)) {
 
 								System.out.println(
-										"Tem aresta entre vertices " + i + " e " + j + " ? \n" + "Digite: \n" + "1 - Sim\n" + "0 - N�o\n");
+										"Tem aresta entre vertices " + i + " e " + j + " ? \n" + "Digite: \n" + "1 - Sim\n" + "0 - Não\n");
 								temAresta = entradas.nextInt();
 
 								while (temAresta < 0 || temAresta > 1) {
-									System.out.println("Valor inv�lido. Digite: \n" + "1 - Sim\n" + "0 - N�o\n");
+									System.out.println("Valor inválido. Digite: \n" + "1 - Sim\n" + "0 - Não\n");
 									temAresta = entradas.nextInt();
 								}
 
@@ -556,7 +556,7 @@ public class Grafo {
 									this.matriz[j][i] = peso;
 								}
 
-								// se n�o tem aresta
+								// se não tem aresta
 								if (temAresta == 0) {
 									this.matriz[i][j] = 99;
 									this.matriz[j][i] = 99;
@@ -567,11 +567,11 @@ public class Grafo {
 						} else if (tipoG == 1) {
 
 							System.out.println(
-									"Tem aresta entre vertices " + i + " e " + j + " ? \n" + "Digite: \n" + "1 - Sim\n" + "0 - N�o\n");
+									"Tem aresta entre vertices " + i + " e " + j + " ? \n" + "Digite: \n" + "1 - Sim\n" + "0 - Não\n");
 							temAresta = entradas.nextInt();
 
 							while (temAresta < 0 || temAresta > 1) {
-								System.out.println("Valor inv�lido. Digite: \n" + "1 - Sim\n" + "0 - N�o\n");
+								System.out.println("Valor inválido. Digite: \n" + "1 - Sim\n" + "0 - Não\n");
 								temAresta = entradas.nextInt();
 							}
 
@@ -597,7 +597,7 @@ public class Grafo {
 								this.matriz[i][j] = peso;
 							}
 
-							// se n�o tem aresta
+							// se não tem aresta
 							if (temAresta == 0) {
 								this.matriz[i][j] = 99;
 							}
@@ -715,7 +715,7 @@ public class Grafo {
 			soma += IN[n];
 		}
 
-		System.out.println("Dist�ncia: \n" + soma);
+		System.out.println("Distância: \n" + soma);
 
 	}
 
@@ -800,7 +800,7 @@ public class Grafo {
 			soma += IN[n];
 		}
 
-		System.out.println("Dist�ncia: \n" + soma);
+		System.out.println("Distância: \n" + soma);
 
 	}
 
@@ -880,6 +880,6 @@ public class Grafo {
 			}
 		}
 		System.out.println("\n");
-		System.out.println("Vertice " + vertice + " tem " + maior + " Componente(s)");
+		System.out.println("Vértice " + vertice + " tem " + maior + " Componente(s)");
 	}
 }

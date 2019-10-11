@@ -6,8 +6,6 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		System.console().flush();
-
 		System.out.println("*************** MENU ***************");
 
 		Scanner entradas = new Scanner(System.in);

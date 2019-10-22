@@ -204,6 +204,7 @@ public class Grafo {
 		if (tipoGrafo == 1) {
 			if (this.matriz[v1][v2] == 0) {
 				this.matriz[v1][v2] = 1;
+				this.matriz[v2][v1] = 1;
 				System.out.println("-> Aresta inserida entre os vertices " + v1 + " e " + v2 + "!");
 			} else {
 				System.out.println("-> Já existe aresta entre os vertices " + v1 + " e " + v2 + "!");
@@ -277,6 +278,7 @@ public class Grafo {
 			return false; // Aresta nao existe
 		} else {
 			this.matriz[v1][v2] = 0;
+			this.matriz[v2][v1] = 0;
 			return true; // Removeu a aresta
 		}
 	}

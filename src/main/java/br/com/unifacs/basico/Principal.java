@@ -6,8 +6,6 @@ public class Principal {
 
 	public static void main(String[] args) {
 
-		System.console().flush();
-
 		System.out.println("*************** MENU ***************");
 
 		Scanner entradas = new Scanner(System.in);
@@ -114,11 +112,11 @@ public class Principal {
 							v1 = entradas.nextInt();
 						}
 
-						// Pega valor do 2� vertice
+						// Pega valor do 2ª vertice
 						System.out.println("Digite o 2ª Vértice: ");
 						v2 = entradas.nextInt();
 
-						// Testa se 2� vertice existe
+						// Testa se 2ª vertice existe
 						while (v2 < 0 || v2 > (qtdVertices - 1)) {
 							System.out.println("Valor inválido. Digite o 2º Vértice: ");
 							v2 = entradas.nextInt();

@@ -463,7 +463,7 @@ public class Grafo {
 
 		System.out.println("\n");
 
-		System.out.println("********** Matriz de Acessibilidade R **********");
+		System.out.println("********** Matriz de Acessibilidade R - Algoritmo Warshall **********");
 
 		imprime();
 	}

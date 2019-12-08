@@ -62,12 +62,13 @@ public class Principal {
 										+ "5 - Obter Vértices adjacentes \n" + "6 - Obter grau de determinado vértice \n"
 										+ "7 - Obter grau Mínimo, Médio ou Máximo \n" + "8 - Verificar se o grafo e Conexo \n"
 										+ "9 - Obter matriz de adjacência \n" + "10 - Verificar se existe um Caminho de Euler no grafo\n"
-										+ "11 - Verificar Vértice com maior componente\n" + "12 - Verificar componentes conectados\n"
+										+ "11 - Verificar Vértice com maior componente\n" + "12 - Verificar componentes conectados\n" + "13- Acessibilidade � Algoritmo de Warshall\n" 
+										+ "14 - Algoritmo de Dijkstra\n"
+										+ "15 - Algoritmo de BellmanFord\n"
+										+ "16 - Floyd\n" 
 										+ "0 - Sair");
-
-						System.out.println("\n");
-
-						if (opcao < 0 || opcao > 12) {
+			
+						if (opcao < 0 || opcao > 16) {
 							System.out.println("Opção inválida. Digite a opção desejada: ");
 							opcao = entradas.nextInt();
 						} else {
@@ -75,7 +76,7 @@ public class Principal {
 							opcao = entradas.nextInt();
 						}
 
-					} while (opcao < 0 || opcao > 12);
+					} while (opcao < 0 || opcao > 16);
 
 					int v = 0, v1 = 0, v2 = 0;
 
@@ -511,6 +512,19 @@ public class Principal {
 							System.out.println("Valor inválido. Digite: \n" + "1 - Para voltar ao menu \n" + "0 - Sair");
 							menu = entradas.nextInt();
 						}
+						break;
+						
+					case 13:
+						Grafo.algoritmoWarshall();
+						break;
+					case 14:
+						Grafo.algoritmoDijkstra();
+						break;
+					case 15:
+						Grafo.algoritmoBellmanFord();
+						break;
+					case 16:
+						Grafo.algoritmoFloyd();
 						break;
 					case 0:
 						// Sair

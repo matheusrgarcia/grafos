@@ -431,10 +431,6 @@ public class Grafo {
 	// Encontra matriz de acessibilidade R
 	public void algoritmoWarshall() {
 
-		grafoNaoPonderado();
-
-		imprime();
-
 		this.matrizTemp = new int[this.qtdVertices][this.qtdVertices];
 
 		for (int k = 0; k < this.qtdVertices; k++) {
